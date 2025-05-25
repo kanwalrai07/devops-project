@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Background and general styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Styling for the navigation bar */
+.navbar {
+  background-color: #3498db;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ecf0f1 !important;
+}
+
+/* Styling for cards */
+.post-card, .comment-card, .user-card {
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.post-card:hover, .comment-card:hover, .user-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+/* Hover effect for cards */
+.hover-card {
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 30px;
+  color: #3498db;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 15px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .section-title {
+    font-size: 1.2rem;
   }
 }
