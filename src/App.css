@@ -3,7 +3,7 @@
 /* Background and general styling */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
+  background-color: #f8f9fa;
   color: #333;
 }
 
@@ -16,6 +16,7 @@ h2 {
 /* Styling for the navigation bar */
 .navbar {
   background-color: #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-nav .nav-link {
@@ -24,6 +25,11 @@ h2 {
 
 .navbar-nav .nav-link:hover {
   color: #ecf0f1 !important;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
 }
 
 /* Styling for cards */
@@ -37,9 +43,14 @@ h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .card-body {
-  background-color: #ffffff;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .card-title {
@@ -65,13 +76,349 @@ h2 {
   color: #3498db;
 }
 
+/* Form styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+
+/* Todo list styling */
+.list-group-item {
+  border: 1px solid #dee2e6;
+  margin-bottom: 0.5rem;
+  border-radius: 8px !important;
+  padding: 1rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}
+
+.todo-item {
+  animation: fadeIn 0.5s ease;
+}
+
+/* Checkbox styling */
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.2em;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Completed todo styling */
+.completed-todo {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+/* Button styling */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+  border-color: #bd2130;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
   .card-body {
-    padding: 15px;
+    padding: 1.5rem;
   }
 
   .section-title {
     font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .form-control {
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+.App {
+  min-height: 100vh;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Tabs styling */
+.nav-tabs {
+  border-bottom: 2px solid #dee2e6;
+  margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: #6c757d;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  margin-right: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  border: none;
+  color: #0d6efd;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+  color: #0d6efd;
+  border-bottom: 2px solid #0d6efd;
+  margin-bottom: -2px;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-header {
+  background-color: #0d6efd;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Form styling */
+.form-control, .form-select {
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  border-color: #80bdff;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+/* Todo list styling */
+.list-group-item {
+  border: 1px solid #dee2e6;
+  margin-bottom: 0.5rem;
+  border-radius: 8px !important;
+  padding: 1rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.todo-item {
+  animation: fadeIn 0.5s ease;
+}
+
+.todo-item.overdue {
+  border-left: 4px solid #dc3545;
+}
+
+.todo-content {
+  flex-grow: 1;
+  margin-right: 1rem;
+}
+
+.todo-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-details {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* API data styling */
+.api-section {
+  margin-bottom: 2rem;
+}
+
+.api-section h6 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.api-section p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.api-section small {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+/* Badge styling */
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+}
+
+/* Checkbox styling */
+.form-check-input {
+  width: 1.2em;
+  height: 1.2em;
+  margin-top: 0.2em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* Completed todo styling */
+.completed-todo .todo-text {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.completed-todo .todo-details {
+  opacity: 0.7;
+}
+
+/* Due date styling */
+.due-date {
+  font-size: 0.875rem;
+}
+
+/* Button styling */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading spinner styling */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Empty state styling */
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.6rem 0.8rem;
+  }
+
+  .todo-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .nav-tabs .nav-link {
+    padding: 0.75rem 1rem;
+  }
+
+  .api-section h6 {
+    font-size: 1rem;
+  }
+
+  .api-section p {
+    font-size: 0.9rem;
   }
 }
