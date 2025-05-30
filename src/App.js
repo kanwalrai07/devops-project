@@ -161,7 +161,7 @@ function App() {
           onSelect={(k) => setActiveTab(k)}
           className="mb-4 orange-tabs"
         >
-          <Tab eventKey="local-todos" title="Local Todos">
+          <Tab eventKey="local-todos" title="meri Todos">
             <Row className="justify-content-center">
               <Col md={8}>
                 <Card className="shadow-sm">
